@@ -44,7 +44,7 @@ config.vm.provision :chef_zero do |chef|
 chef.roles_path = './chef/roles'
 chef.data_bags_path = './chef/data_bags'
 chef.nodes_path = './chef/nodes' 
-chef.run_list = 'recipe[apache2]'
+chef.run_list = ['recipe[apache2]','recipe[java]']
 chef.cookbooks_path = ["./chef/cookbooks"]
   end
   # Provider-specific configuration so you can fine-tune various
